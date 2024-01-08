@@ -8,7 +8,7 @@ const Navbar = () => {
       <Routes>
         <Route to="/" element={<Home/>}/>
       </Routes>
-      <Link to="/">Home</Link>
+      <Link to="/support">Home</Link>
     </div>
   )
 }
