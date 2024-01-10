@@ -28,7 +28,7 @@ const Navbar = (props) => {
       </nav>
       <div className='flex ml-3 gap-3'>
         {
-          isLoggedIn===true?
+          isLoggedIn===false?
           <>
             <NavLink to="/login">
               <button>Login</button>
