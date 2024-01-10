@@ -4,8 +4,10 @@ import logo from '../assets/Logo.svg';
 import toast from 'react-hot-toast';
 
 const Navbar = (props) => {
+  
   const isLoggedIn = props.isLoggedIn;
   const setIsLoggedIn = props.setIsLoggedIn;
+
   return (
     <div className='flex justify-around'>
       <NavLink to="/">
@@ -26,7 +28,7 @@ const Navbar = (props) => {
       </nav>
       <div className='flex ml-3 gap-3'>
         {
-          isLoggedIn===false?
+          isLoggedIn===true?
           <>
             <NavLink to="/login">
               <button>Login</button>
