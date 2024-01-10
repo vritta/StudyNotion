@@ -12,14 +12,14 @@ const LoginForm = () => {
   return (
     <div>
       <form>
-        <label htmlFor="email"><p>Email Address<sub>*</sub></p></label>
+        <label htmlFor="email"><p>Email Address<sup>*</sup></p></label>
         <input required type='email' placeholder='Enter email address' 
         name='email' id='email' value = {formData.email} onChange={changeHandler} 
         className='outline rounded-md'/>
         <br /><br />
 
 
-        <label htmlFor="password"><p>Password<sub>*</sub></p></label>
+        <label htmlFor="password"><p>Password<sup>*</sup></p></label>
         <input type={showPassword?"text":"password"} placeholder='Enter Password' 
         name='password' id='password' value = {formData.password} onChange={changeHandler} 
         className='outline rounded-md'/>
