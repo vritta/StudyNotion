@@ -9,12 +9,12 @@ const Navbar = (props) => {
   const setIsLoggedIn = props.setIsLoggedIn;
 
   return (
-    <div className='flex justify-around'>
+    <div className='flex items-center justify-between text-white w-11/12 max-w-[1160px] py-4  mx-auto'>
       <NavLink to="/">
         <img src={logo} alt=''/>
       </NavLink>
       <nav>
-        <ul className='flex gap-3'>
+        <ul className='flex gap-6 text-richblack-100'>
           <li>
             <NavLink to="/">Home</NavLink>
           </li>
@@ -26,25 +26,31 @@ const Navbar = (props) => {
           </li>
         </ul>
       </nav>
-      <div className='flex ml-3 gap-3'>
+
+      <div className='flex items-center gap-x-4 text-richblack-100'>
         {
           isLoggedIn===false?
           <>
             <NavLink to="/login">
-              <button>Login</button>
+              <button className='bg-richblack-800 py-[8px] px-[12px] 
+              rounded-[8px] border border-richblack-700'>Login</button>
             </NavLink>
             <NavLink to="/signup">
-              <button>Sign Up</button>
+              <button className='bg-richblack-800 py-[8px] px-[12px] 
+              rounded-[8px] border border-richblack-700'>Sign Up</button>
             </NavLink>
           </>:
           <>
           <NavLink to="/">
-            <button onClick={()=>{setIsLoggedIn(false); toast.success("Logged Out");}}>
+            <button onClick={()=>{setIsLoggedIn(false); toast.success("Logged Out");}}
+             className='bg-richblack-800 py-[8px] px-[12px] rounded-[8px] border
+              border-richblack-700'>
               Log Out
             </button>
           </NavLink>
           <NavLink to="/dashboard">
-            <button>Dashboard</button>
+            <button className='bg-richblack-800 py-[8px] px-[12px] 
+            rounded-[8px] border border-richblack-700'>Dashboard</button>
           </NavLink>
           </>
         }
