@@ -38,40 +38,41 @@ const SignupForm = ({setIsLoggedIn}) => {
         <form onSubmit={submitHandler}>
             <div>
                 <label>
-                    <p>First Name<sup>*</sup></p>
+                    <p className='text-[0.875rem] leading-[1.375rem] mb-1 text-richblack-5'>First Name<sup className='text-pink-200'>*</sup></p>
                     <input required type="text" placeholder='Enter First Name' name='firstName' 
-                    id='firstName' onChange={changeHandler} value={formData.firstName}/>
+                    id='firstName' onChange={changeHandler} value={formData.firstName} className='bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px]'/>
                 </label>
                 <label>
-                    <p>Last Name<sup>*</sup></p>
+                    <p className='text-[0.875rem] leading-[1.375rem] mb-1 text-richblack-5'>Last Name<sup className='text-pink-200'>*</sup></p>
                     <input required type="text" placeholder='Enter Last Name' name='lastName' 
-                    id='lastName' onChange={changeHandler} value={formData.lastName}/>
+                    id='lastName' onChange={changeHandler} value={formData.lastName} className='bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px]'/>
                 </label>
             </div>
             
             <label>
-                <p>Email Address<sup>*</sup></p>
+                <p className='text-[0.875rem] leading-[1.375rem] mb-1 text-richblack-5'>Email Address<sup className='text-pink-200'>*</sup></p>
                 <input required type="email" placeholder='Enter Email Address' name='email' 
-                id='email' onChange={changeHandler} value={formData.email}/>
+                id='email' onChange={changeHandler} value={formData.email} className='bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px]'/>
             </label>
 
             <div>
-                <label>
-                    <p>Create Password<sup>*</sup></p>
+                <label className='relative'>
+                    <p className='text-[0.875rem] leading-[1.375rem] mb-1 text-richblack-5'>Create Password<sup className='text-pink-200'>*</sup></p>
                     <input required type={showPassword?"text":"password"} placeholder='Enter Password' name='password' 
-                    id='password' onChange={changeHandler} value={formData.password}/>
-                    <span onClick={() => setShowPassword((prev)=>!prev)}>
-                        {showPassword?<AiOutlineEyeInvisible/>:<AiOutlineEye/>}
+                    id='password' onChange={changeHandler} value={formData.password} className='bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px]'/>
+                    <span onClick={() => setShowPassword((prev)=>!prev)}
+                    className='absolute top-[38px] right-3 cursor-pointer'>
+                        {showPassword?<AiOutlineEyeInvisible fontSize={24} fill='#AFB2BF'/>:<AiOutlineEye fontSize={24} fill='#AFB2BF'/>}
                     </span>
                 </label>
 
-
-                <label>
-                    <p>Confirm Password<sup>*</sup></p>
+                <label className='relative'>
+                    <p className='text-[0.875rem] leading-[1.375rem] mb-1 text-richblack-5'>Confirm Password<sup className='text-pink-200'>*</sup></p>
                     <input required type={showPassword?"text":"password"} placeholder='Confirm Password' name='confirmPassword' 
-                    id='confirmPassword' onChange={changeHandler} value={formData.confirmPassword}/>
-                    <span onClick={() => setShowPassword((prev)=>!prev)}>
-                        {showPassword?<AiOutlineEyeInvisible/>:<AiOutlineEye/>}
+                    id='confirmPassword' onChange={changeHandler} value={formData.confirmPassword} className='bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px]'/>
+                    <span onClick={() => setShowPassword((prev)=>!prev)}
+                    className='absolute top-[74px] right-3 cursor-pointer'>
+                        {showPassword?<AiOutlineEyeInvisible fontSize={24} fill='#AFB2BF'/>:<AiOutlineEye fontSize={24} fill='#AFB2BF'/>}
                     </span>
                 </label>
             </div>
